@@ -1,6 +1,5 @@
 package com.nettaravel.com.com.nextrravel.jwt;
 
-
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.HttpHeaders;
@@ -8,13 +7,9 @@ import org.springframework.http.HttpHeaders;
 @Configuration
 @ConfigurationProperties(prefix = "application.jwt")
 public class JwtConfig {
-
-    private  String secretKey;
-
+    private String secretKey;
     private String tokenPrefix;
-
-    private String tokenExpirationAfterDays;
-
+    private Integer tokenExpirationAfterDays;
 
     public String getSecretKey() {
         return secretKey;
@@ -32,14 +27,13 @@ public class JwtConfig {
         this.tokenPrefix = tokenPrefix;
     }
 
-    public String getTokenExpirationAfterDays() {
+    public Integer getTokenExpirationAfterDays() {
         return tokenExpirationAfterDays;
     }
 
-    public void setTokenExpirationAfterDays(String tokenExpirationAfterDays) {
+    public void setTokenExpirationAfterDays(Integer tokenExpirationAfterDays) {
         this.tokenExpirationAfterDays = tokenExpirationAfterDays;
     }
-
     public String getAuthorizationHeader(){
         return HttpHeaders.AUTHORIZATION;
     }

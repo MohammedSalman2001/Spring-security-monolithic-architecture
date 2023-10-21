@@ -93,11 +93,6 @@
 			<version>32.0.1-jre</version>
 		</dependency>
 
-		<dependency>
-			<groupId>com.google.common</groupId>
-			<artifactId>google-collect</artifactId>
-			<version>0.5</version>
-		</dependency>
 	</dependencies>
 
 	<build>
