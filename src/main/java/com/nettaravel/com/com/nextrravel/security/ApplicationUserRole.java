@@ -8,7 +8,7 @@ import java.util.stream.Collectors;
 
 public enum ApplicationUserRole {
     DOCTOR(Sets.newHashSet()),
-    USER(Sets.newHashSet());
+    ADMIN(Sets.newHashSet());
 
 
     private final Set<ApplicationUserPermission> permission;
