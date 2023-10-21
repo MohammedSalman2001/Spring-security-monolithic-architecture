@@ -1,4 +1,6 @@
 package com.nettaravel.com.com.nextrravel.security;
 
-public class ApplicationUserPermission {
+public enum ApplicationUserPermission {
+
+
 }
