@@ -1,4 +1,6 @@
 package com.nettaravel.com.com.nextrravel.jwt;
 
-public class JwtUserNamePasswordAuthenticationFilter {
+import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
+
+public class JwtUserNamePasswordAuthenticationFilter extends UsernamePasswordAuthenticationFilter {
 }
