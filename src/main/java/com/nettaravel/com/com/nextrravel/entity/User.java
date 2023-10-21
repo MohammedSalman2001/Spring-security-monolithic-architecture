@@ -1,20 +1,16 @@
 package com.nettaravel.com.com.nextrravel.entity;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
 
 @AllArgsConstructor
-@NoArgsConstructor
+@RequiredArgsConstructor
 @Getter
 @Setter
 @Entity
 public class User {
-
     @Id
     public long id;
     public String fullName;
