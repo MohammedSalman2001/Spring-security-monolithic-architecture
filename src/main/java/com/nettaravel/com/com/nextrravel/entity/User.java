@@ -4,6 +4,8 @@ import lombok.*;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
+import java.util.Set;
 
 @AllArgsConstructor
 @RequiredArgsConstructor
@@ -20,4 +22,7 @@ public class User {
     public boolean isCredentialsNoExpired;
     public boolean isAccountNonLock;
     public boolean isEnable;
+
+    @OneToMany(mappedBy = "user")
+    private Set<UserRoleHasUser> userRoleHasUser;
 }

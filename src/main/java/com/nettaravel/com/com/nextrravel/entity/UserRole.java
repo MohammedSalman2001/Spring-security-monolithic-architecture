@@ -7,6 +7,8 @@ import lombok.Setter;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
+import java.util.Set;
 
 @AllArgsConstructor
 @NoArgsConstructor
@@ -21,4 +23,7 @@ public class UserRole {
     private String roleName;
 
     private String description;
+
+    @OneToMany(mappedBy = "userRole")
+    private Set<UserRoleHasUser> userRoleHasUser;
 }
