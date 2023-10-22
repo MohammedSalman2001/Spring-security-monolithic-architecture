@@ -1,14 +1,11 @@
 package com.nettaravel.com.com.nextrravel.entity;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 import javax.persistence.*;
 
 @AllArgsConstructor
-@NoArgsConstructor
+@RequiredArgsConstructor
 @Getter
 @Setter
 
@@ -27,4 +24,10 @@ private UserRoleHasUserKey id=new UserRoleHasUserKey();
     @MapsId("userRole")
     @JoinColumn(name = "user_role",nullable = false)
     private UserRole userRole;
+
+
+    public UserRoleHasUser(User user, UserRole userRole) {
+        this.user = user;
+        this.userRole = userRole;
+    }
 }

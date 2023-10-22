@@ -20,7 +20,7 @@ public class UserController {
         this.userService = userService;
     }
 
-    @PostMapping(path = "visitor/signup")
+    @PostMapping(path = "/visitor/signup")
     public ResponseEntity<StandardResponse> createDoctor(@RequestBody RequestUserDto dto){
      userService.signup(dto);
         return new ResponseEntity<>(
