@@ -4,4 +4,6 @@ import com.nettaravel.com.com.nextrravel.dto.request.RequestUserDto;
 
 public interface UserService {
     public void signup(RequestUserDto dto);
+
+    public void verifyUser(String type,String token);
 }

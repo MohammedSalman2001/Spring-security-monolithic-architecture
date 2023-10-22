@@ -55,4 +55,9 @@ public class UserServiceImpl implements UserService {
 
 
     }
+
+    @Override
+    public void verifyUser(String type, String token) {
+
+    }
 }
