@@ -19,7 +19,6 @@ public class DoctorController {
     }
 
     @PostMapping
-
     public ResponseEntity<StandardResponse> createDoctor(@RequestBody RequestDoctorDto doctorDto){
         doctorService.createDoctor(doctorDto);
         return new ResponseEntity<>(
